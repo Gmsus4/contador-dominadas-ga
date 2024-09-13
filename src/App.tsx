@@ -1,11 +1,15 @@
 import { useState } from 'react'
-import './App.css'
+import moment from 'moment';
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
+import './App.css'
 
 function App() {
+  const getDay = moment().dayOfYear(); //Obtiene los días que va del año
+  const getDominadas = ((1 + getDay) / 2) * getDay; //Transforma esos días en las dominadas hechas por Gero Arias
+
   const [inputValue, setInputValue] = useState(0);
-  const [result, setResult] = useState(false);
-  const [count, setCount] = useState(0);
+  // const [result, setResult] = useState(false);
+  const [count, setCount] = useState(getDominadas);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(Number(e.target.value));
@@ -16,13 +20,12 @@ function App() {
     const totalDays = ((1 + inputValue) / 2) * inputValue;
 
     setCount(totalDays);
-    setResult(true);
+    // setResult(true);
   }
 
   return (
     <>
       <div className='container'>
-        {/* { result && ( <h1>Gero Arias lleva {count} dominadas</h1> ) } */}
         <div className='form-data'>
           <form onSubmit={getHowManyDays} className='form'>
             <label htmlFor="number">Escribe el día del reto</label>
@@ -40,9 +43,9 @@ function App() {
         </div>
 
         <div className='total'> 
-          <p>Total:</p>
-          { result ? ( <h1>{String(count).replace(/(.)(?=(\d{3})+$)/g,'$1,') }</h1> ) : ( <h1>???</h1> ) }
-          {/* <p>dominadas</p> */}
+          <p>Total de dominadas del día {getDay}:</p>
+          {/* { result ? ( <h1>{String(count).replace(/(.)(?=(\d{3})+$)/g,'$1,') }</h1> ) : ( <h1>???</h1> ) } */}
+          <h1>{String(count).replace(/(.)(?=(\d{3})+$)/g,'$1,') }</h1>
         </div>
 
         <div className='footer'>
@@ -57,9 +60,9 @@ function App() {
               <FaYoutube size={50} color='white'/>
             </a>
           </div>
+          <a href='https://www.instagram.com/gmsus4.dev/' target="_blank" rel="noopener noreferrer" className='gmsus4'>Created by Gmsus4</a>
         </div>
 
-        <a href='https://www.instagram.com/gmsus4.dev/' target="_blank" rel="noopener noreferrer" className='gmsus4'>Created by Gmsus4</a>
       </div>
     </>
   )
