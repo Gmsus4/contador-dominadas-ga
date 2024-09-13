@@ -12,7 +12,7 @@ function App() {
   const getDominadas = ((1 + getDay) / 2) * getDay;
 
   // Estados para manejar el valor ingresado, el día y el total de dominadas
-  const [inputValue, setInputValue] = useState(0); // Almacena el día ingresado
+  const [inputValue, setInputValue] = useState(getDay); // Almacena el día ingresado
   const [day, setDay] = useState(getDay); // Almacena el día actual
   const [count, setCount] = useState(getDominadas); // Almacena el número total de dominadas
 
