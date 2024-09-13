@@ -1,50 +1,71 @@
-# React + TypeScript + Vite
+# Seguimiento Diario de Dominadas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto en React que permite calcular el total de dominadas realizadas en un reto basado en el día del desafío. La aplicación muestra el total de dominadas realizadas hasta el día especificado.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Permite al usuario ingresar el número de días del reto.
+- Calcula el total de dominadas realizadas hasta el día indicado.
+- Muestra el total de dominadas en un formato legible.
+- Incluye enlaces a redes sociales para compartir el proyecto.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **React Icons**: Librería para iconos en React.
+- **CSS**: Para el estilo y diseño de la aplicación.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Para ejecutar el proyecto localmente, sigue estos pasos:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/tuusuario/seguimiento-diario-dominadas.git
+    ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Navega al directorio del proyecto:
+    ```bash
+    cd seguimiento-diario-dominadas
+    ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. Instala las dependencias:
+    ```bash
+    npm install
+    ```
+
+4. Ejecuta la aplicación:
+    ```bash
+    npm start
+    ```
+
+   La aplicación se abrirá en `http://localhost:3000`.
+
+## Uso
+
+1. Ingresa el día del reto en el campo de texto.
+2. Haz clic en el botón "Ver dominadas hechas 🔥".
+3. El total de dominadas realizadas hasta el día especificado se mostrará en la pantalla.
+
+## Contribuciones
+
+Si deseas contribuir al proyecto, por favor sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios.
+4. Haz commit de tus cambios (`git commit -am 'Agrega nueva funcionalidad'`).
+5. Envía tus cambios a tu repositorio fork (`git push origin feature/nueva-funcionalidad`).
+6. Crea un Pull Request en el repositorio original.
+
+<!-- ## Licencia
+
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE). -->
+
+## Contacto
+
+Para cualquier consulta o comentario, puedes contactar a [Gmsus4](https://www.instagram.com/gmsus4.dev/).
+
+---
+
+Creado por [Gmsus4](https://www.instagram.com/gmsus4.dev/).
