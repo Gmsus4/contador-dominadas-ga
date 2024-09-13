@@ -27,6 +27,12 @@ body{
   position: relative;
 }
 
+.total .dayDate {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .total > p:first-of-type {
   position: absolute;
   left: 0;
