@@ -1,0 +1,92 @@
+body{
+  background-image: url(./assets/gero-arias.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-color: rgba(0, 0, 0, 0.7 ); /* 0.5 hace que la capa negra sea semitransparente */
+  background-blend-mode: darken; /* Mezcla el color negro con la imagen */
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container h1{
+  margin: 0px;
+  font-size: 100px;
+  text-align: center;
+} 
+
+.total {
+  position: relative;
+}
+
+.total > p:first-of-type {
+  position: absolute;
+  left: 0;
+  top: -30px;
+}
+
+.total > p:last-of-type {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+}
+
+.form-data, .footer{
+  padding: 50px 0;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputNumber {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.form-data p{
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+} 
+
+.footer{
+  width: 200px;
+}
+
+.social-media{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer div p {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.gmsus4 {
+  position: absolute;
+  color: grey;
+  font-size: 10px;
+  bottom: 16px;
+}
